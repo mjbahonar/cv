@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <style>.theme-toggle{display:grid;place-items:center;width:35px;height:35px;border:1px solid var(--line);border-radius:10px;background:rgba(15,25,48,.65);color:#dce7ff;cursor:pointer;font-size:1rem}.light-theme{--bg:#eef4ff;--surface:#fff;--surface-2:#f5f8ff;--line:rgba(36,69,126,.17);--text:#13203b;--muted:#53627d}.light-theme .backdrop{background:linear-gradient(140deg,#eef5ff,#f8fbff 58%,#e9efff)}.light-theme .topbar{background:rgba(255,255,255,.78)}.light-theme .profile-card{background:linear-gradient(155deg,rgba(213,231,255,.85),rgba(245,248,255,.9))}.light-theme .floating-tag{background:rgba(255,255,255,.85);color:#38527e}</style>
+    <style>.theme-toggle{display:grid;place-items:center;width:35px;height:35px;border:1px solid var(--line);border-radius:10px;background:rgba(15,25,48,.65);color:#dce7ff;cursor:pointer;font-size:1rem}.light-theme{--bg:#eef4ff;--surface:#fff;--surface-2:#f5f8ff;--line:rgba(36,69,126,.17);--text:#13203b;--muted:#53627d}.light-theme .backdrop{background:linear-gradient(140deg,#eef5ff,#f8fbff 58%,#e9efff)}.light-theme .topbar{background:rgba(255,255,255,.78)}.light-theme .profile-card{background:linear-gradient(155deg,rgba(213,231,255,.85),rgba(245,248,255,.9))}.light-theme .floating-tag{background:rgba(255,255,255,.85);color:#38527e}.resume-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.resume-card{padding:26px;border:1px solid var(--line);border-radius:18px;background:rgba(13,22,43,.58);box-shadow:0 12px 32px rgba(1,5,18,.14)}.resume-wide{grid-column:span 2}.card-label{margin:0 0 16px;color:#7f9bc9;text-transform:uppercase;letter-spacing:.13em;font-size:.67rem;font-weight:700}.resume-card>p:not(.card-label){margin:0;color:#c3cee2;font-size:.96rem;line-height:1.8}.skill-list{display:flex;flex-wrap:wrap;gap:8px}.skill-list span{padding:7px 10px;border:1px solid rgba(85,169,255,.23);border-radius:8px;background:rgba(29,62,115,.24);color:#d3e4ff;font-size:.78rem}.timeline{display:grid;gap:24px}.timeline>div+div{padding-top:21px;border-top:1px solid var(--line)}.timeline-head{display:flex;justify-content:space-between;gap:18px;align-items:baseline}.timeline h3{margin:0;font-size:1rem;letter-spacing:-.02em}.timeline-head span,.compact-list span{color:#8998b5;font-size:.74rem}.timeline p{margin:8px 0 0;color:#aebbd0;font-size:.88rem;line-height:1.7}.compact-list,.language-list{display:grid;gap:16px}.compact-list div{display:flex;flex-direction:column;gap:4px}.compact-list strong{font-size:.92rem}.language-list span{display:flex;justify-content:space-between;color:#b4c2d9;font-size:.83rem}.language-list b{color:#f1f5ff}.contact-note{max-width:365px;margin:0 0 16px;color:#aab8d0;font-size:.86rem;line-height:1.7}@media (max-width:800px){.resume-grid{grid-template-columns:1fr}.resume-wide{grid-column:span 1}.timeline-head{flex-direction:column;gap:4px}}
+    </style>
   </head>
   <body>
     <div class="backdrop" aria-hidden="true"></div>
@@ -58,19 +59,22 @@
 
       <section class="resume-section" id="resume" aria-labelledby="resume-title">
         <div class="section-heading">
-          <div><p class="eyebrow">The complete document</p><h2 id="resume-title">Curriculum vitae</h2></div>
-          <a class="outline-btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">Open in new tab <span aria-hidden="true">↗</span></a>
+          <div><p class="eyebrow">Experience, skills, and direction</p><h2 id="resume-title">Curriculum vitae</h2></div>
+          <a class="outline-btn" href="assets/resume.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="pdf-frame">
-          <object data="assets/resume.pdf" type="application/pdf" aria-label="Mohammad Javad Bahonar CV">
-            <div class="pdf-fallback"><p>Your browser cannot display the PDF inline.</p><a class="primary-btn" href="assets/resume.pdf" download>Download the CV</a></div>
-          </object>
+        <div class="resume-grid">
+          <article class="resume-card resume-wide"><p class="card-label">Professional profile</p><p>Software Developer with hands-on experience in full-stack web development, desktop applications, automation, and AI-based software. Delivered 15+ client web applications and led development of an online journal management platform.</p></article>
+          <article class="resume-card"><p class="card-label">Technical skills</p><div class="skill-list"><span>Python</span><span>PHP</span><span>C# / .NET</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>SQL</span><span>Git</span><span>TensorFlow</span><span>scikit-learn</span><span>Power BI</span><span>Linux</span></div></article>
+          <article class="resume-card resume-wide"><p class="card-label">Professional experience</p><div class="timeline"><div><div class="timeline-head"><h3>Freelance Software Developer</h3><span>2014 – Present</span></div><p>Delivered client web applications with PHP, Java, JavaScript, React, and SQL backends. Built a C#/.NET desktop accounting application and Python-based AI and automation projects.</p></div><div><div class="timeline-head"><h3>Project Manager · Poyesh Pardis Pezeshki</h3><span>2018 – 2023</span></div><p>Designed a custom Windows application for project managers, supporting planning, tracking, and company-specific workflows.</p></div><div><div class="timeline-head"><h3>Head of Software Development · Arman Research Institute</h3><span>2017 – 2018</span></div><p>Led a PHP-based online journal management platform covering submission, editorial, review, and administration workflows.</p></div></div></article>
+          <article class="resume-card"><p class="card-label">Selected projects</p><div class="compact-list"><div><strong>Persian Carpet Generation System</strong><span>2025 – Present</span></div><div><strong>Automatic AnkiCard Generator</strong><span>2023</span></div></div></article>
+          <article class="resume-card"><p class="card-label">Education</p><div class="compact-list"><div><strong>M.Sc. Civil Engineering</strong><span>Yazd University · 2014 – 2017</span></div><div><strong>B.Sc. Civil Engineering</strong><span>University of Isfahan · 2010 – 2014</span></div></div></article>
+          <article class="resume-card"><p class="card-label">Languages</p><div class="language-list"><span><b>Persian</b> Native</span><span><b>English</b> C1 · IELTS 7.0</span><span><b>Norwegian</b> Beginner</span></div></article>
         </div>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div><p class="eyebrow">Let’s connect</p><h2 id="contact-title">Build something<br /><span>useful and lasting.</span></h2></div>
-        <div class="contact-details"><a href="mailto:mj.bahonar@gmail.com">mj.bahonar@gmail.com</a><a href="tel:+4748641648">+47 486 41 648</a><div class="socials"><a href="https://linkedin.com/in/mjbahonar" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/mjbahonar" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+        <div class="contact-details"><p class="contact-note">For software development, automation, or AI projects, send me a message and I’ll get back to you.</p><a href="mailto:mj.bahonar@gmail.com">mj.bahonar@gmail.com</a><a href="tel:+4748641648">+47 486 41 648</a><div class="socials"><a href="https://linkedin.com/in/mjbahonar" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/mjbahonar" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
       </section>
     </main>
 
