@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio and CV of Mohammad Javad Bahonar, Full-Stack Software Developer." />
+    <title>Mohammad Javad Bahonar — Full-Stack Software Developer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>.theme-toggle{display:grid;place-items:center;width:35px;height:35px;border:1px solid var(--line);border-radius:10px;background:rgba(15,25,48,.65);color:#dce7ff;cursor:pointer;font-size:1rem}.light-theme{--bg:#eef4ff;--surface:#fff;--surface-2:#f5f8ff;--line:rgba(36,69,126,.17);--text:#13203b;--muted:#53627d}.light-theme .backdrop{background:linear-gradient(140deg,#eef5ff,#f8fbff 58%,#e9efff)}.light-theme .topbar{background:rgba(255,255,255,.78)}.light-theme .profile-card{background:linear-gradient(155deg,rgba(213,231,255,.85),rgba(245,248,255,.9))}.light-theme .floating-tag{background:rgba(255,255,255,.85);color:#38527e}</style>
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark">MJ</span>
+        <span>Mohammad Javad Bahonar</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="active" href="#top">Profile</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme"><span aria-hidden="true">☼</span></button>
+      <a class="download-btn" href="assets/resume.pdf" download>Download CV <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Available for thoughtful software work</p>
+          <h1 id="hero-title">Full-Stack<br /><span>Software Developer</span></h1>
+          <p class="lede">I design and build dependable web applications, desktop tools, automation, and AI-powered software from Bergen, Norway.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#resume">View full CV <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="mailto:mj.bahonar@gmail.com">mj.bahonar@gmail.com <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="quick-stats" aria-label="Career highlights">
+            <div><strong>15+</strong><span>client applications</span></div>
+            <div><strong>10+</strong><span>years building software</span></div>
+            <div><strong>3</strong><span>languages in progress</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Developer profile visual">
+          <div class="glow-orb"></div>
+          <div class="profile-card">
+            <div class="card-top"><span class="status"><i></i> Bergen, Norway</span><span class="card-chip">01 / 01</span></div>
+            <div class="monogram">MJ<span>.</span></div>
+            <div class="card-footer"><span>Python · React · .NET</span><span>Scroll to explore ↓</span></div>
+          </div>
+          <div class="floating-tag tag-one">AI &amp; automation</div>
+          <div class="floating-tag tag-two">Clean systems</div>
+        </div>
+      </section>
+
+      <section class="resume-section" id="resume" aria-labelledby="resume-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">The complete document</p><h2 id="resume-title">Curriculum vitae</h2></div>
+          <a class="outline-btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">Open in new tab <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="pdf-frame">
+          <object data="assets/resume.pdf" type="application/pdf" aria-label="Mohammad Javad Bahonar CV">
+            <div class="pdf-fallback"><p>Your browser cannot display the PDF inline.</p><a class="primary-btn" href="assets/resume.pdf" download>Download the CV</a></div>
+          </object>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div><p class="eyebrow">Let’s connect</p><h2 id="contact-title">Build something<br /><span>useful and lasting.</span></h2></div>
+        <div class="contact-details"><a href="mailto:mj.bahonar@gmail.com">mj.bahonar@gmail.com</a><a href="tel:+4748641648">+47 486 41 648</a><div class="socials"><a href="https://linkedin.com/in/mjbahonar" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/mjbahonar" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>© <span id="year"></span> Mohammad Javad Bahonar</span><span>Designed for clarity.</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
